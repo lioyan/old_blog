@@ -46,7 +46,9 @@ $(function(){
 							$(this).next().fadeIn(450,function(){
 								$(this).next().fadeIn(450,function(){
 									$(this).next().fadeIn(450,function(){
-										$("aside").fadeIn(300);
+										$(this).next().fadeIn(450,function(){
+											$("aside").fadeIn(300);
+										});
 									});
 								});
 							});

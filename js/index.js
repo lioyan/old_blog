@@ -255,14 +255,59 @@ $(function(){
 			});
 	});
 //内容适应居中
-	var size=$(function(){
+	var size=function(){
 		$("aside").css({"top":($(".active").height()-$("aside").height())/2});
 		$("#home_content").css({"padding-top":($(".active").height()-$("#home_content").height())/6});
 		$("#about_content").css({"padding-top":($(".active").height()-$("#about_content").height())/6});
 		$("#skill_content").css({"padding-top":($(".active").height()-$("#skill_content").height())/6});
 		$("#exp_content").css({"padding-top":($(".active").height()-$("#exp_content").height())/6});
 		$("#demo_content").css({"padding-top":($(".active").height()-$("#demo_content").height())/6});;
-	});
+	};
 	$(window).resize(function(){
 		size();
 	});
+
+// 没有作品上传时，缩略图变成灰度图片
+	function convertToGS(img){
+		img.color = img.src;
+		img.grayscale = createGSCanvas(img);
+
+		img.src = img.grayscale;		
+	}
+
+	function createGSCanvas(img){
+		var canvas = document.createElement('canvas');
+		canvas.width = img.width;
+		canvas.height = img.height;
+		if(!canvas.getContext) return;
+		var ctx = canvas.getContext('2d');
+		ctx.drawImage(img,0,0);
+
+		var c = ctx.getImageData(0,0,img.width,img.height);
+		for (var i = 0; i < c.height; i++){
+			for(var j = 0; j < c.width;j++){
+				var x = (i*4)*c.height + (j*4);
+				var r = c.data[x];
+				var g = c.data[x+1];
+				var b = c.data[x+2];
+				c.data[x] = c.data[x+1] = c.data[x+2] = (r+g+b)/3;
+			}
+		}
+
+		ctx.putImageData(c,0,0,0,0,c.width,c.height);
+
+		return canvas.toDataURL();
+	}
+
+	$('.demo_box_title').each(function(){
+		if($(this).text()=="待上传"){
+			var demoBoxBg = $(this).parent().next()[0];
+			convertToGS(demoBoxBg);
+		}
+	})
+	// var demoBoxBgs = $('.demo_box_bg');
+	// for(var k = 0;k<demoBoxBgs.length;k++){
+	// 	convertToGS(demoBoxBgs[k]);
+	// }
+	
+	//convertToGS(document.getElementById('ooo'));

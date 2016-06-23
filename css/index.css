@@ -276,7 +276,8 @@ img#home_photo2 {
 #home_info2,
 #home_info3,
 #home_info4,
-#home_info5 {
+#home_info5,
+#home_info6 {
 	margin: 15px auto;
 	display: none;
 	width: 800px;

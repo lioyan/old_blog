@@ -828,8 +828,8 @@ img#home_photo2 {
 	left: 14px;
 	bottom: 8px;
 	background: transparent;
-	-webkit-transform: skew(-12deg) rotate(-4deg);
-	transform: skew(-12deg) rotate(-4deg);
+	/*-webkit-transform: skew(-12deg) rotate(-4deg);
+	transform: skew(-12deg) rotate(-4deg);*/
 	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); 
 }
 .demo_box li:after {
@@ -841,8 +841,8 @@ img#home_photo2 {
 	right: 14px;
 	bottom: 8px;
 	background: transparent;
-	-webkit-transform: skew(12deg) rotate(4deg);
-	transform: skew(12deg) rotate(4deg);
+	/*-webkit-transform: skew(12deg) rotate(4deg);
+	transform: skew(12deg) rotate(4deg);*/
 	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); 
 }
 .demo_box_bg {

@@ -5,21 +5,21 @@
 		"日新月异的web前沿技术和层出不穷的框架让我既兴奋又期待",
 		"代码强迫症患者，看漂亮的代码对我而言是一种极致享受"
 	],
-	"skill_info":"IT行业的学习需要持之以恒，知识深度与广度都很重要。而前端开发的重中之重就是原生javaScript的理解，一直都在不断琢磨《javaScript高级程序设计》这本书来内化自己。另外还在不断学习新的知识，如artTemplate，seajs，glup等等。",
+	"skill_info":"IT行业的学习需要持之以恒，知识深度与广度都很重要。从几年前的jQuery一把利剑扫天下，到现在Ember,Angular,React,Vue,Gulp,Webpack各种框架，模板技术，自动化工具层出不穷，让人目不暇接。而RN,Weex,Node的出现更是打开了前端新世界的大门，很庆幸我身处这风起云涌的时代 ",
 	"html":[
-		"深刻理解Web标准",
-		"熟练运用html标签",
-		"了解HTML5新特性"
+		"熟练使用html常用标签",
+		"熟练运用bootstrap快速布局",
+		"胜任日常开发"
 	],
 	"css":[
 		"熟练运用css及css3新属性",
 		"注重浏览器兼容性",
-		"掌握css预编译器Less"
+		"习惯使用less"
 	],
 	"javaScript":[
-		"掌握jQuery库",
+		"熟练掌握jQuery，Knockout，各种框架",
 		"掌握ajax的运作原理及json数据结构",
-		"正在不断学习原生JavaScript"
+		"胜任日常页面动效，前端逻辑开发"
 	],
 	"exp_info":"2010年进入大学后，开始web前端自学生涯。",
 	"contact_info":[
